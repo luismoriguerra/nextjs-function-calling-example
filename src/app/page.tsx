@@ -2,12 +2,12 @@
 
 import { useState } from 'react';
 import { useUIState, useActions } from "ai/rsc";
-import type { AI } from './action';
+import type { AIProvider } from './action';
 
 export default function Page() {
   const [inputValue, setInputValue] = useState('');
-  const [messages, setMessages] = useUIState<typeof AI>();
-  const { submitUserMessage } = useActions<typeof AI>();
+  const [messages, setMessages] = useUIState<typeof AIProvider>();
+  const { submitUserMessage } = useActions<typeof AIProvider>();
 
   return (
     <div>
